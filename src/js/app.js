@@ -15,14 +15,12 @@ document.addEventListener('DOMContentLoaded', () => {
             h.textContent = citations[i++]
         }, 5000);
     }());
-
     function ascent() {
         const cell = document.querySelectorAll('.cell')
         let img = document.createElement('img');
         img.src = "https://img.icons8.com/external-icongeek26-linear-colour-icongeek26/64/external-Samurai-japan-icongeek26-linear-colour-icongeek26.png"
         img.style.width = '100%';
         img.style.height = '100%';
-
         setInterval(() => {
             let i = Math.floor(Math.random() * (cell.length - 1))
             cell[i].appendChild(img)

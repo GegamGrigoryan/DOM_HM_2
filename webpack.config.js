@@ -29,8 +29,12 @@ module.exports = {
           MiniCssExtractPlugin.loader, 'css-loader',
         ],
       },
+      {
+        test: /\.(?:ico|gif|png|jpg|jpeg)$/i,
+        use: ["file-loader"]
+      }
     ],
-},
+  },
   plugins: [
     new HtmlWebPackPlugin({
       template: './src/index.html',
