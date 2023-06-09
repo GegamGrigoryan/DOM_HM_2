@@ -1,12 +1,13 @@
 body {
-    height: 100%;
-    max-width: 1800px;
+    min-height: 100%;
+    min-width: 100%;
     padding: 0;
     margin: 0;
     background-color: black;
     background-image: url("./img/back.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+
 }
 
 .main {
@@ -15,6 +16,32 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.life-line {
+    width: 100%;
+    height: 20px;
+    position: fixed;
+    top: 0;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap
+}
+
+.samurai {
+    background-color: red;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    text-align: left;
+}
+
+.bad-samurai {
+    height: 100%;
+    background-color: #f1a825;
+    box-sizing: border-box;
+    display: flex;
+    text-align: left;
 }
 
 h2 {
@@ -42,4 +69,67 @@ h2 {
     box-sizing: border-box;
     display: inline-block;
     margin: 1px;
+}
+
+.jp-map-wrp {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: 20px;
+    box-sizing: border-box;
+}
+
+.win-wrp {
+    width: 300px;
+    height: 300px;
+    border: 5px solid red;
+    border-radius: 50%;
+    box-sizing: border-box;
+    padding: auto;
+    margin: 0 auto;
+    position: absolute;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+
+    z-index: 1050;
+    opacity: 0;
+    -webkit-transition: opacity 200ms ease-in;
+    -moz-transition: opacity 200ms ease-in;
+    transition: opacity 200ms ease-in;
+    pointer-events: none;
+    margin: 0;
+    padding: 0;
+}
+
+.hiden {
+    opacity: 1;
+    pointer-events: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.win-img {
+    width: 150px;
+    height: 150px;
+}
+
+.btn-reset {
+    display: flex;
+    color: white;
+    background-color: red;
+    border: 5px solid red;
+    border-radius: 15px;
+    font-weight: bold;
+}
+
+.win-name {
+    display: flex;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    justify-content: center;
 }
